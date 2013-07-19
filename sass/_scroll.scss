@@ -1,0 +1,41 @@
+
+/* =Infinite Scroll
+How to use this is located here: http://jetpack.me/support/infinite-scroll/
+----------------------------------------------- */
+
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .navigation-paging, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+#infinite-handle span {
+    background: none repeat scroll 0 0 $coral;
+    border-radius: 1px 1px 1px 1px;
+    cursor: pointer;
+    padding: 6px 16px;
+	margin: 10px 0;
+	text-transform: uppercase;
+	color: white;
+	font-size: 1em;
+	&:hover{
+		color: white;
+		text-decoration: none;
+	}
+	@media screen and (max-width: 800px) {
+	text-align: center;
+	font: 1.5em;
+	}
+}
+
+.infinite-loader {
+    color: $lightblue;
+    display: block;
+    height: 28px;
+    text-indent: -9999px;
+}

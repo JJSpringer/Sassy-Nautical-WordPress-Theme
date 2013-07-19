@@ -1,0 +1,169 @@
+/* =Navigation
+----------------------------------------------- */
+
+.site-content [class*="navigation"] {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+[class*="navigation"] .nav-previous {
+	float: left;
+	@include sassy-button(flat, 0px, 1em, $coral, $coral, white, false, true);
+	margin: 10px 0;
+	text-transform: uppercase;
+	color: white;
+	&:hover{
+		color: white;
+		text-decoration: none;
+	}
+		@media screen and (max-width: 850px) {
+	@include sassy-button(flat, 0px, .8em, $coral, $coral, white, false, true);
+	margin: 5px 0;
+	}
+}
+[class*="navigation"] .nav-next {
+	float: right;
+	text-align: right;
+	@include sassy-button(flat, 0px, 1em, $coral, $coral, white, false, true);
+	margin: 10px 0;
+	text-transform: uppercase;
+	color:	white;
+	&:hover{
+		color: white;
+		text-decoration: none;
+	}
+	@media screen and (max-width: 850px) {
+	@include sassy-button(flat, 0px, .8em, $coral, $coral, white, false, true);
+	margin: 5px 0;
+	}
+}
+
+.nav-next a {
+	color: white;
+	text-decoration: none;
+	&:hover {
+		color: white;
+		text-decoration: none;
+	}
+	&:active {
+		color: white;
+		text-decoration: none;
+	}
+	&:visted {
+		color: white;
+		text-decoration: none;
+	}
+}
+
+.nav-previous a {
+	color: white;
+	text-decoration: none;
+	&:hover {
+		color: white;
+		text-decoration: none;
+	}
+	&:active {
+		color: white;
+		text-decoration: none;
+	}
+	&:visted {
+		color: white;
+		text-decoration: none;
+	}
+}
+
+[class*="navigation"] .nav-next-comments {
+	float: right;
+	text-align: right;
+	@include sassy-button(flat, 0px, 1em, $lightblue, $lightblue, white, false, true);
+	margin: 10px 0;
+	text-transform: uppercase;
+	color:	white;
+	&:hover{
+		color: white;
+		text-decoration: none;
+	}
+	@media screen and (max-width: 850px) {
+	@include sassy-button(flat, 0px, .8em, $lightblue, $lightblue, white, false, true);
+	margin: 5px 0;
+	}
+}
+
+.nav-next-comments a {
+	color: white;
+	text-decoration: none;
+	&:hover {
+		color: white;
+		text-decoration: none;
+	}
+	&:active {
+		color: white;
+		text-decoration: none;
+	}
+	&:visted {
+		color: white;
+		text-decoration: none;
+	}
+}
+
+[class*="navigation"] .nav-previous-comments {
+	float: left;
+	@include sassy-button(flat, 0px, 1em, $lightblue, $lightblue, white, false, true);
+	margin: 10px 0;
+	text-transform: uppercase;
+	color: white;
+	&:hover{
+		color: white;
+		text-decoration: none;
+	}
+		@media screen and (max-width: 850px) {
+	@include sassy-button(flat, 0px, .8em, $lightblue, $lightblue, white, false, true);
+	margin: 5px 0;
+	}
+}
+.nav-previous-comments a {
+	color: white;
+	text-decoration: none;
+	&:hover {
+		color: white;
+		text-decoration: none;
+	}
+	&:active {
+		color: white;
+		text-decoration: none;
+	}
+	&:visted {
+		color: white;
+		text-decoration: none;
+	}
+}
+
+.comment-reply-link {
+	@include sassy-button(flat, 0px, .8em, $lightblue, $lightblue, white, false, true);
+	margin: 10px 0 20px 0;
+	text-transform: uppercase;
+	color: white;
+	&:hover{
+		color: white;
+		text-decoration: none;
+	}
+		@media screen and (max-width: 850px) {
+	@include sassy-button(flat, 0px, .6em, $lightblue, $lightblue, white, false, true);
+	margin: 5px 0;
+	}
+}
+.comment-reply-link a {
+	color: white;
+	text-decoration: none;
+	&:hover {
+		color: white;
+		text-decoration: none;
+	}
+	&:active {
+		color: white;
+		text-decoration: none;
+	}
+	&:visted {
+		color: white;
+		text-decoration: none;
+	}
+}

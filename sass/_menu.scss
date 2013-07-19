@@ -1,0 +1,148 @@
+/* =Menu
+----------------------------------------------- */
+.navbar{
+    margin: 0 auto;
+    width: 100%;
+}
+.menuline{
+	border-top-color: $lightblue;
+	border-top-style: solid;
+	border-top-width: 5px;
+	width: 100%;
+}
+
+#site-navigation {
+	background-color: $darkblue;
+	text-align: center;
+	margin: .25em 0px 1em 0;
+	padding: .75em 0 .35em 0;
+}
+.navigation-main {
+	clear: both;
+	display: block;
+	float: none;
+	width: 100%;
+	margin: auto;
+	background-color: $darkblue;
+	text-align: center;
+}
+.navigation-main ul {
+	display: inline-block;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+	background-color: $darkblue;
+}
+.navigation-main li {
+	float: left;
+	position: relative;
+	color: #000000;
+	font-family: $headerfont;
+	font-weight: 300;
+	text-align: left;
+	text-decoration: none;
+	margin-left: 15px;
+	& a {color: white}
+		&:active{
+			text-decoration: underline;
+		}
+		&:hover{
+			text-decoration: underline;
+		}
+}
+.navigation-main a {
+	display: block;
+	text-decoration: none;
+	&:hover{
+		text-decoration: underline;
+	}
+}
+.navigation-main ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	display: none;
+	float: left;
+	position: absolute;
+		top: 1.5em;
+		left: 0;
+	z-index: 99999;
+	color: #000000;
+	background: $darkblue;
+	font-family: $headerfont;
+	font-weight: 300;
+	text-align: left;
+	text-decoration: none;
+	padding: 5px;
+	& a {
+	color: white;
+	width: 200px;
+	}
+		&:active{
+			text-decoration: underline;
+		}
+		&:hover{
+			text-decoration: underline;
+		}
+}
+
+.navigation-main ul ul li{
+	& a {
+	color: white;
+	width: 200px;
+	}
+		&:active{
+			text-decoration: underline;
+		}
+		&:hover{
+			text-decoration: underline;
+		}
+
+}
+.navigation-main ul ul ul {
+	left: 100%;
+	top: 0;
+}
+.navigation-main ul ul li {
+}
+.navigation-main li:hover > a {
+}
+.navigation-main ul ul :hover > a {
+}
+.navigation-main ul ul a:hover {
+}
+.navigation-main ul li:hover > ul {
+	display: block;
+}
+.navigation-main li.current_page_item a,
+.navigation-main li.current-menu-item a {
+}
+
+/* Small menu */
+.menu-toggle {
+	display: none;
+	cursor: pointer;
+	color: white;
+}
+
+.main-small-navigation ul {
+	display: none;
+}
+
+@media screen and (max-width: 600px) {
+	.menu-toggle,
+	.main-small-navigation ul.nav-menu.toggled-on {
+		display: block;
+		color: white;
+		list-style: none;
+		margin: 0px;
+		text-decoration: none;
+	}
+	
+	.main-small-navigation ul.nav-menu.toggled-on li a {
+		color: white;
+		text-decoration: none;
+	}
+
+	.navigation-main ul {
+		display: none;
+	}
+}

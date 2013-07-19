@@ -1,0 +1,25 @@
+/* =Comments
+----------------------------------------------- */
+
+.comment-content a {
+	word-wrap: break-word;
+}
+.bypostauthor {
+	color: $lightblue;
+}
+.reply {
+	margin-bottom: 5px;
+	color: lighten($darkblue, 10%);
+}
+.comment-meta {
+	list-style: none;
+}
+
+.comment {
+	list-style: none;
+}
+
+.comment-body {
+    border-bottom: 1px solid darken($beige, 10%);
+    margin-bottom: 15px;
+    }

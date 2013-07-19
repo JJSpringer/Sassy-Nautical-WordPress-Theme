@@ -1,0 +1,29 @@
+/* =Content
+----------------------------------------------- */
+
+.sticky { 
+	color: lighten($darkblue, 10%);
+	font-weight: 600;
+}
+.hentry {
+	margin: 0 0 1.5em;
+}
+.byline {
+	display: none;
+}
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0 1.5em;
+	@media screen and (max-width: 800px) {
+	margin-left: 0;
+	}
+
+}
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
