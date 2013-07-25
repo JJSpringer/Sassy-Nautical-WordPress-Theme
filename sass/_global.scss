@@ -1,8 +1,7 @@
 /* =Global
 ----------------------------------------------- */
 
-/* =Sass Functions
--------------------------------------------------------------- */
+// =Sass Functions
 $darkblue: #0B2E46;
 $lightblue: #6291b6;
 $coral: #f79366;
@@ -19,8 +18,7 @@ $bodyfont: 'Open Sans', Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill S
 	font-size: 1em;
 }
 
-/* =Global 
------------------------------------------------ */
+// =Rest of Global
 body,
 button,
 input,
@@ -351,6 +349,7 @@ a:active {
 
 }
 
+/* Header */
 @import "icons/*.png";
 
 .anchor{
@@ -407,6 +406,7 @@ a:active {
 	text-decoration: underline;
 }
 
+/* Posts */
 .entry-title {
 	font-family: $headerfont;
 	font-weight: 300;
@@ -432,6 +432,7 @@ a:active {
     }
 }
 
+/* Meta */
 .entry-meta {
 	margin-left: 1.5em;
 	padding-bottom: 1.5em;
@@ -529,6 +530,7 @@ a:active {
 	}
 }
 
+/* Featured Images */
 .entry-thumbnail {
 	max-width: 984;
 	margin-left: 1.5em;
@@ -549,6 +551,7 @@ a:active {
 	text-align: center;
 }
 
+/* Footer */
 .site-footer{
 	clear:both;
 	width:100%;

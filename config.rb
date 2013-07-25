@@ -9,7 +9,7 @@ images_dir = "images"
 javascripts_dir = "js"
 fonts_dir = "fonts"
 
-output_style = :nested
+output_style = :compact
 environment = :development
 
 relative_assets = true
