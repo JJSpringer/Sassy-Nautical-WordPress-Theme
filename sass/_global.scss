@@ -516,16 +516,16 @@ a:active {
 }
 
 .more-link {
-	float: right;
-	@include sassy-button(flat, 0px, 1em, $coral, $coral, white, false, true);
-	margin: 10px 0;
+	float: left;
+	@include sassy-button(flat, 0px, 1em, $lightblue, $lightblue, white, false, true);
+	margin: 10px 0 25px 0;
 	text-transform: uppercase;
 	&:hover{
 		color: white;
 		text-decoration: none;
 	}
 	@media screen and (max-width: 850px) {
-	@include sassy-button(flat, 0px, .8em, $coral, $coral, white, false, true);
+	@include sassy-button(flat, 0px, .8em, $lightblue, $lightblue, white, false, true);
 	margin: 5px 0;
 	}
 }

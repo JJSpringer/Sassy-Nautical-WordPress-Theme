@@ -1,7 +1,7 @@
 3.2.9 (Media Mark)
-a02517305f4b477a52047587d8eebcf79392e78f
+9e489812abb3347d035fd3fae99fbe1c0e4ff9cc
 o:Sass::Tree::RootNode
-:@template"Æ)/* =Global
+:@template"Ü)/* =Global
 ----------------------------------------------- */
 
 // =Sass Functions
@@ -519,16 +519,16 @@ a:active {
 }
 
 .more-link {
-	float: right;
-	@include sassy-button(flat, 0px, 1em, $coral, $coral, white, false, true);
-	margin: 10px 0;
+	float: left;
+	@include sassy-button(flat, 0px, 1em, $lightblue, $lightblue, white, false, true);
+	margin: 10px 0 25px 0;
 	text-transform: uppercase;
 	&:hover{
 		color: white;
 		text-decoration: none;
 	}
 	@media screen and (max-width: 850px) {
-	@include sassy-button(flat, 0px, .8em, $coral, $coral, white, false, true);
+	@include sassy-button(flat, 0px, .8em, $lightblue, $lightblue, white, false, true);
 	margin: 5px 0;
 	}
 }
@@ -1156,23 +1156,14 @@ width;o;7;"icons-sprite-width;8{ ;@;'0;iø;([o;	;;;"bubble;@;i
 width;o;7;"icons-sprite-width;8{ ;@;'0;i;([o;	;;;"tag;@;i;$;%;@;&i ;	[ ;io;!;["display;o;;;;"inline-block;@;$;%;@;&i ;	[ ;io;!;["margin;o;;;;"
 0 5px;@;$;%;@;&i ;	[ ;i;iýo;);*[".more-link;+o;,;-[o;.;-[o;/
 ;00;1o;2;3{ ;-[o;F;["more-link;6" ;i;6@;i;6@;i;T;@;&i ;	[o;!;["
-float;o;;;;"
-right;@;$;%;@;&i ;	[ ;io;@;"sassy-button;8{ ;@;	[ ;'0;i;([o;	;;;"	flat;@;io;9;:[ ;;["px;i ;@;<"0px;io;9;:[ ;;["em;i;@;<"1em;io;"	;"
-coral;@;i;#"
-coralo;"	;"
-coral;@;i;#"
-coralo;	;0;{	;iÿ;iÿ;i;iÿ;@;io;A;F;@;io;A;T;@;io;!;["margin;o;;;;"10px 0;@;$;%;@;&i ;	[ ;i	o;!;["text-transform;o;;;;"uppercase;@;$;%;@;&i ;	[ ;i
+float;o;;;;"	left;@;$;%;@;&i ;	[ ;io;@;"sassy-button;8{ ;@;	[ ;'0;i;([o;	;;;"	flat;@;io;9;:[ ;;["px;i ;@;<"0px;io;9;:[ ;;["em;i;@;<"1em;io;"	;"lightblue;@;i;#"lightblueo;"	;"lightblue;@;i;#"lightblueo;	;0;{	;iÿ;iÿ;i;iÿ;@;io;A;F;@;io;A;T;@;io;!;["margin;o;;;;"10px 0 25px 0;@;$;%;@;&i ;	[ ;i	o;!;["text-transform;o;;;;"uppercase;@;$;%;@;&i ;	[ ;i
 o;);*["&:hover;+o;,;-[o;.;-[o;/
 ;00;1o;2;3{ ;-[o;N;6" ;io;B
 ;["
 hover;;C;D0;6@N;i;6@N;i;6@N;i;T;@;&i ;	[o;!;["
 color;o;;;;"
 white;@;$;%;@;&i ;	[ ;io;!;["text-decoration;o;;;;"	none;@;$;%;@;&i ;	[ ;i;io;L;T;" ;@;&i ;	[o;@;"sassy-button;8{ ;@;	[ ;'0;i;([o;	;;;"	flat;@;io;9;:[ ;;["px;i ;@;<"0px;io;9;:[ ;;["em;f0.80000000000000004 ™š;@;<"
-0.8em;io;"	;"
-coral;@;i;#"
-coralo;"	;"
-coral;@;i;#"
-coralo;	;0;{	;iÿ;iÿ;i;iÿ;@;io;A;F;@;io;A;T;@;io;!;["margin;o;;;;"
+0.8em;io;"	;"lightblue;@;i;#"lightblueo;"	;"lightblue;@;i;#"lightblueo;	;0;{	;iÿ;iÿ;i;iÿ;@;io;A;F;@;io;A;T;@;io;!;["margin;o;;;;"
 5px 0;@;$;%;@;&i ;	[ ;i;M["screen"
  and "(o;	;;;"max-width;@;i": o;9;:[ ;;["px;iR;@;<"
 850px;i");i;io;
