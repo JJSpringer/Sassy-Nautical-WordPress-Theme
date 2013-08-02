@@ -39,3 +39,4 @@ Thumbs.db
 # Other #
 codekit-config.json
 .sass-cache
+config.rb
