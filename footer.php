@@ -22,7 +22,7 @@
 			<?php do_action( 'sassy_nautical_credits' ); ?>
 			<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'sassy_nautical' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'sassy_nautical' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'sassy_nautical' ), 'Sassy Nautical Theme', '<a href="http://jjsfolio.com" rel="designer">J.J. Springer</a>' ); ?>
+			<?php printf( __( 'Theme: %1$s by %2$s.', 'sassy_nautical' ), 'Sassy Nautical', '<a href="http://jjsfolio.com" rel="designer">J.J. Springer</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
