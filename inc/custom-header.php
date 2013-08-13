@@ -35,7 +35,7 @@
 function sassy_nautical_custom_header_setup() {
 	$args = array(
 		'default-image'          => '%s/images/img_anchor.png',
-		'default-text-color'     => '000',
+		'default-text-color'     => '#6291b6',
 		'width'                  => 150,
 		'height'                 => 150,
 		'flex-height'            => true,
