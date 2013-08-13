@@ -52,7 +52,7 @@ function sassy_nautical_setup() {
 	/**
 	 * Enable support for Post Formats
 	 */
-	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
+	//add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
 }
 endif; // sassy_nautical_setup
 
@@ -74,7 +74,7 @@ add_action( 'after_setup_theme', 'sassy_nautical_setup' );
  */
 function sassy_nautical_register_custom_background() {
 	$args = array(
-		'default-color' => 'ffffff',
+		'default-color' => '0B2E46',
 		'default-image' => '',
 	);
 
@@ -130,7 +130,7 @@ add_action( 'wp_enqueue_scripts', 'sassy_nautical_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-//require get_template_directory() . '/inc/custom-header.php';
+require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.

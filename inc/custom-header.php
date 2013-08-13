@@ -34,10 +34,10 @@
  */
 function sassy_nautical_custom_header_setup() {
 	$args = array(
-		'default-image'          => '',
+		'default-image'          => '%s/images/img_anchor.png',
 		'default-text-color'     => '000',
-		'width'                  => 1000,
-		'height'                 => 250,
+		'width'                  => 150,
+		'height'                 => 150,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'sassy_nautical_header_style',
 		'admin-head-callback'    => 'sassy_nautical_admin_header_style',
@@ -48,6 +48,17 @@ function sassy_nautical_custom_header_setup() {
 
 	if ( function_exists( 'wp_get_theme' ) ) {
 		add_theme_support( 'custom-header', $args );
+		
+		register_default_headers( array(
+			'anchor' => array(
+				'url'           => '%s/images/img_anchor.png',
+				'thumbnail_url' => '%s/images/img_anchor.png',
+				'description'   => _x( 'Anchor', 'header image description', 'sassy_nautical' )
+		),
+	) );
+
+		
+		
 	} else {
 		// Compat: Versions of WordPress prior to 3.4.
 		define( 'HEADER_TEXTCOLOR',    $args['default-text-color'] );
@@ -91,19 +102,45 @@ if ( ! function_exists( 'sassy_nautical_header_style' ) ) :
  * @see sassy_nautical_custom_header_setup().
  */
 function sassy_nautical_header_style() {
-	$header_text_color = get_header_textcolor();
+	$header_image = get_header_image();
+	$text_color = get_header_textcolor();
 
 	// If no custom options for text are set, let's bail
 	// get_header_textcolor() options: HEADER_TEXTCOLOR is default, hide text (returns 'blank') or any hex value
-	if ( HEADER_TEXTCOLOR == $header_text_color )
+	if ( empty( $header_image ) && $text_color == get_theme_support( 'custom-header', 'default-text-color' ) )
 		return;
 
 	// If we get this far, we have custom styles. Let's do this.
 	?>
 	<style type="text/css">
+		<?php
+		if ( ! empty( $header_image ) ) :
+	?>
+		.anchor {
+				background: url(<?php header_image(); ?>) no-repeat scroll top;
+				background-size: 100%;
+				background-position: center;
+				width: 10%;
+				height: 100px;
+				max-width: 100px;
+				min-width: 50px;
+				margin-top: .5em;
+				float:left;
+				display: inline-block;
+		}
+	@media screen and (max-width: 900px) {
+			.anchor {
+				float: none;
+				width: 100px;
+				margin: 0 auto;
+				display: block;
+				}
+	}
 	<?php
+		endif;
+
 		// Has the text been hidden?
-		if ( 'blank' == $header_text_color ) :
+		if ( 'blank' == $text_color ) :
 	?>
 		.site-title,
 		.site-description {
@@ -111,13 +148,22 @@ function sassy_nautical_header_style() {
 			clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
 			clip: rect(1px, 1px, 1px, 1px);
 		}
+<?php
+			if ( empty( $header_image ) ) :
+	?>
+		.anchor .home-link {
+			min-height: 0;
+			display: none;
+		}
 	<?php
+			endif;
+
 		// If the user has set a custom color for the text use that
-		else :
+		elseif ( $text_color != get_theme_support( 'custom-header', 'default-text-color' ) ) :
 	?>
 		.site-title a,
 		.site-description {
-			color: #<?php echo $header_text_color; ?>;
+			color: #<?php echo $text_color; ?>;
 		}
 	<?php endif; ?>
 	</style>
@@ -141,12 +187,31 @@ function sassy_nautical_admin_header_style() {
 	#desc {
 	}
 	#headimg h1 {
+	color: #416a8b;
+	font-size: 3em; 
+	font-family: 'Roboto Slab';
+	font-weight: 100;
+	text-decoration: none;
+	display: block;
+	vertical-align: bottom;
 	}
 	#headimg h1 a {
+	text-decoration: none;
 	}
 	#desc {
+	color: #6291b6;
+	text-transform: uppercase;
+	font-size: 1em;
+	font-family: 'Roboto Slab';
+	font-weight: 300;
+	vertical-align: top;
 	}
 	#headimg img {
+	background-size: 100%;
+	background-position: center;
+	max-width: 100px;
+	min-width: 50px;
+	vertical-align: middle;
 	}
 	</style>
 <?php
@@ -164,12 +229,22 @@ function sassy_nautical_admin_header_image() {
 	$header_image = get_header_image();
 ?>
 	<div id="headimg">
-		<h1 class="displaying-header-text"><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-		<div class="displaying-header-text" id="desc"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></div>
-		<?php if ( ! empty( $header_image ) ) : ?>
-			<img src="<?php echo esc_url( $header_image ); ?>" alt="" />
-		<?php endif; ?>
-	</div>
+	<table border="0">
+  <tr>
+    <td rowspan="2">	
+    <?php if ( ! empty( $header_image ) ) : ?>
+			<img src="<?php echo esc_url( $header_image ); ?>" alt="" /></td>
+	<?php endif; ?>
+    <td>		
+    <h1 class="displaying-header-text"><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1></td>
+  </tr>
+  <tr>
+    <td><div class="displaying-header-text" id="desc"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></div></td>
+  </tr>
+  </table>
+		</div>
+
+
 <?php
 }
 endif; // sassy_nautical_admin_header_image

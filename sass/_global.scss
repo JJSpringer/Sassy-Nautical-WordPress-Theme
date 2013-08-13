@@ -352,24 +352,6 @@ a:active {
 /* Header */
 @import "icons/*.png";
 
-.anchor{
-	background: url(images/img_anchor.png) no-repeat;
-	background-size: 100%;
-	background-position: center;
-	width: 10%;
-	height: 100px;
-	max-width: 100px;
-	min-width: 50px;
-	margin-top: .5em;
-	float:left;
-	display: inline-block;
-	@media screen and (max-width: 900px) {
-	float: none;
-	width: 100px;
-	margin: 0 auto;
-	display: block;
-	}
-}
 .site-branding{
 	margin-left: 5%;
 	vertical-align: middle;
@@ -441,15 +423,14 @@ a:active {
 	@media screen and (max-width: 800px) {
 	margin-left: 0;
 	}
-
-	}
+}
 
 .sep  {
 	margin-left: 6px;
 	color: $lightblue;
 }
 
-.entry-date, .author, .cat-links, .tags-links, .post-edit-link, .comments-link, .sep  {
+.entry-date, .author.vcard, .cat-links, .tags-links, .post-edit-link, .comments-link, .sep  {
 	@include metafooter;
 }
 
@@ -462,7 +443,7 @@ a:active {
 	margin: 0 5px;
 }
 
-.author:before {
+.author.vcard:before {
 	content: "";
 	@include icons-sprite(person);
 	height: icons-sprite-height(person);
@@ -558,3 +539,4 @@ a:active {
 	border-top: 1px solid $lightblue;
 	padding-top: 20px;
 }
+

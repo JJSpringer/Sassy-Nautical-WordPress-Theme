@@ -1,6 +1,6 @@
 /*
 Theme Name: Sassy Nautical
-Theme URI: https://github.com/JJSpringer/sassy_nautical
+Theme URI: https://github.com/JJSpringer/Sassy-Nautical-WordPress-Theme
 Author: J.J. Springer
 Author URI: http://jjsfolio.com
 Description: A responsive full-width blog theme that has optional widgets in the footer area. This theme was created with Sass and Compass and includes the Sass files for you to use if you need. 
@@ -191,10 +191,7 @@ a:hover, a:focus, a:active { color: #416a8b; }
 .site-header { position: relative; color: #fffdf9; display: block; margin: 0 auto; max-width: 984px; text-decoration: none; width: 100%; }
 
 /* Header */
-.icons-sprite, .entry-title:before, .entry-date:before, .author:before, .cat-links:before, .post-edit-link:before, .comment-edit-link:before, .comments-link:before, .tags-links:before { background: url('images/icons-s5f6ca890c1.png') no-repeat; }
-
-.anchor { background: url(images/img_anchor.png) no-repeat; background-size: 100%; background-position: center; width: 10%; height: 100px; max-width: 100px; min-width: 50px; margin-top: .5em; float: left; display: inline-block; }
-@media screen and (max-width: 900px) { .anchor { float: none; width: 100px; margin: 0 auto; display: block; } }
+.icons-sprite, .entry-title:before, .entry-date:before, .author.vcard:before, .cat-links:before, .post-edit-link:before, .comment-edit-link:before, .comments-link:before, .tags-links:before { background: url('images/icons-s5f6ca890c1.png') no-repeat; }
 
 .site-branding { margin-left: 5%; vertical-align: middle; margin: 0 auto; max-width: 984px; padding: 0 20px; display: inline-block; margin-bottom: 30px; }
 @media screen and (max-width: 900px) { .site-branding { float: none; display: block; text-align: center; } }
@@ -219,11 +216,11 @@ a:hover, a:focus, a:active { color: #416a8b; }
 
 .sep { margin-left: 6px; color: #6291b6; }
 
-.entry-date, .author, .cat-links, .tags-links, .post-edit-link, .comments-link, .sep { font-family: "Roboto Slab", Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif; font-weight: 300; color: #6291B6; font-size: 1em; }
+.entry-date, .author.vcard, .cat-links, .tags-links, .post-edit-link, .comments-link, .sep { font-family: "Roboto Slab", Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif; font-weight: 300; color: #6291B6; font-size: 1em; }
 
 .entry-date:before { content: ""; background-position: 0 -126px; height: 18px; width: 18px; display: inline-block; margin: 0 5px; }
 
-.author:before { content: ""; background-position: 0 -198px; height: 18px; width: 17px; display: inline-block; margin: 0 5px; }
+.author.vcard:before { content: ""; background-position: 0 -198px; height: 18px; width: 17px; display: inline-block; margin: 0 5px; }
 
 .cat-links:before { content: ""; background-position: 0 -162px; height: 18px; width: 12px; display: inline-block; margin: 0 5px; }
 
